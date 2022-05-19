@@ -1,7 +1,7 @@
 ### A Scalable Modern Full Stack ECommerce Application with Stripe Payments Using Sanity for Structured Content and Next.js as Framework 
 ![eCommerce](https://github.com/Mabast1/ecommerce/blob/main/ecommerce/assets/herobanner.png)
 
-**MCommerce is a fully responsive Modern Full Stack Ecommerce application with Payments functionality**. With Modern design, animations, the ability to add and edit products on the go using a CMS, all advanced cart functionalities, and most importantly the complete integration with Stripe so that you can cover REAL payments. 
+**MCommerce is a fully responsive Modern Full Stack Ecommerce Application with Payments functionality**. With Modern design, animations, the ability to add and edit products on the go using a CMS, all advanced cart functionalities, and most importantly the complete integration with Stripe so that you can cover REAL payments. 
 
 Technologies used: 
 - Advanced React Best Practices such as
