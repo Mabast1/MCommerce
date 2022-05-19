@@ -100,7 +100,7 @@ span.text-red {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;
+  margin: 2rem 0 10rem 0;
   width: 100%;
 }
 .product-card {
@@ -119,6 +119,22 @@ span.text-red {
   transition: transform 0.5s ease;
 }
 
+.product-image:hover {
+  background: #324d67;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .product-name {
   font-weight: 500;
 }
@@ -130,16 +146,21 @@ span.text-red {
 
 .hero-banner-container {
   padding: 100px 40px;
-  background-color: #dcdcdc;
+  /* background-color: #dcdcdc; */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   border-radius: 15px;
   position: relative;
   height: 500px;
   line-height: 0.9;
   width: 100%;
 }
+
 .hero-banner-container .beats-solo {
   font-size: 20px;
 }
+
 .hero-banner-container button {
   border-radius: 15px;
   padding: 10px 16px;
@@ -157,18 +178,46 @@ span.text-red {
   font-size: 4rem;
   margin-top: 4px;
 }
+
 .hero-banner-container h1 {
   color: white;
   font-size: 10em;
   margin-left: -20px;
   text-transform: uppercase;
 }
+
 .hero-banner-image {
   position: absolute;
   top: 0%;
   right: 20%;
   width: 450px;
   height: 450px;
+  object-fit: cover;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 4.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.product-banner-desc {
+  color: white !important;
 }
 
 .desc {
@@ -181,11 +230,13 @@ span.text-red {
   flex-direction: column;
   color: #324d67;
 }
+
 .desc p {
   color: #5f5f5f;
   font-weight: 100;
   text-align: end;
 }
+
 .desc h5 {
   margin-bottom: 12px;
   font-weight: 700;
@@ -193,19 +244,23 @@ span.text-red {
   /* color: black; */
   align-self: flex-end;
 }
+
 .products-heading {
   text-align: center;
-  margin: 40px 0px;
+  margin: 60px 0px;
   color: #324d67;
 }
+
 .products-heading h2 {
   font-size: 40px;
   font-weight: 800;
 }
+
 .products-heading p {
   font-size: 16px;
   font-weight: 200;
 }
+
 .footer-banner-container {
   padding: 100px 40px;
   background-color: #f02d34;
@@ -217,6 +272,7 @@ span.text-red {
   width: 100%;
   margin-top: 120px;
 }
+
 .banner-desc {
   display: flex;
   justify-content: space-between;
@@ -244,7 +300,7 @@ span.text-red {
   position: absolute;
   /* top: -35%;
   left: 8%; */
-  top: -25%;
+  top: -20%;
   left: 25%;
 }
 .banner-desc .right {
@@ -406,9 +462,9 @@ span.text-red {
 }
 .product-detail-container {
   display: flex;
+  grid-gap: 40px;
   gap: 40px;
-  margin: 40px;
-  margin-top: 60px;
+  margin: 60px 40px 40px;
   color: #324d67;
 }
 
@@ -426,6 +482,7 @@ span.text-red {
 }
 .small-images-container {
   display: flex;
+  grid-gap: 10px;
   gap: 10px;
   margin-top: 20px;
 }
