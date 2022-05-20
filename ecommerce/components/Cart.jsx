@@ -19,6 +19,7 @@ const Cart = () => {
     cartItems,
     setShowCart,
     toggleCartItemQuantity,
+    onRemove,
   } = useStateContext();
 
   return (
@@ -54,7 +55,7 @@ const Cart = () => {
         )}
         <div className="product-container">
           {cartItems.length >= 1 &&
-            cartItems.map((item, index) => (
+            cartItems.map((item) => (
               <div className="product" key={item._id}>
                 <img
                   src={urlFor(item?.image[0])}
@@ -89,7 +90,11 @@ const Cart = () => {
                         </span>
                       </p>
                     </div>
-                    <button type="button" className="remove-item" onClick="">
+                    <button
+                      type="button"
+                      className="remove-item"
+                      onClick={() => onRemove(item)}
+                    >
                       <TiDeleteOutline />
                     </button>
                   </div>
