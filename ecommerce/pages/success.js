@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { BsBagCheckFill } from "react-icons/bs";
 import { useStateContext } from "../context/StateContext";
@@ -25,10 +25,11 @@ const Success = () => {
         <p className="email-msg">
           Check your email inbox for the purchase receipt
         </p>
-        <p className="desc">
+        <p className="description">
           If you have any questions, please email
-          <a className="email" href="mailto:mabast.n@gmail.com"></a>
-          support@mcommerce.com
+          <a className="email" href="mailto:mabast.n@gmail.com">
+            support@mcommerce.com
+          </a>
         </p>
         <Link href="/">
           <button type="button" width="300px" className="btn">
