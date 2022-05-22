@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Link from "next/link";
 import {
   AiOutlineMinus,
@@ -42,6 +42,10 @@ const Cart = () => {
 
     stripe.redirectToCheckout({ sessionId: data.id });
   };
+
+  // useEffect(() => {
+  //   localStorage.setItem("cart", JSON.stringify(cartItems));
+  // }, [cartItems]);
 
   return (
     <div

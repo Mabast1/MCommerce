@@ -130,6 +130,8 @@ span.text-red {
   background-color: #ebebeb;
   transform: scale(1, 1);
   transition: 0.3s ease-in-out;
+
+  object-fit: contain;
 }
 
 .product-image:hover {
@@ -408,10 +410,12 @@ span.text-red {
   padding: 20px;
 }
 .product .cart-product-image {
-  width: 180px;
+  width: 150px;
   height: 150px;
   border-radius: 15px;
   background-color: #ebebeb;
+
+  object-fit: contain;
 }
 .item-desc .flex {
   display: flex;
@@ -508,6 +512,7 @@ span.text-red {
 .product-detail-image {
   border-radius: 15px;
   background-color: #ebebeb;
+  object-fit: cover;
 
   width: 400px;
   height: 400px;
@@ -529,6 +534,7 @@ span.text-red {
   width: 70px;
   height: 70px;
   cursor: pointer;
+  object-fit: contain;
 }
 
 .selected-image {
