@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { BsBagCheckFill } from "react-icons";
+import { BsBagCheckFill } from "react-icons/bs";
 import { useStateContext } from "../context/StateContext";
+import { runFireworks } from "../lib/utils";
 
 const Success = () => {
   const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext();
@@ -11,6 +12,7 @@ const Success = () => {
     setCartItems([]);
     setTotalPrice(0);
     setTotalQuantities(0);
+    runFireworks();
   }, []);
 
   return (
@@ -23,10 +25,10 @@ const Success = () => {
         <p className="email-msg">
           Check your email inbox for the purchase receipt
         </p>
-        <p className="description">
+        <p className="desc">
           If you have any questions, please email
           <a className="email" href="mailto:mabast.n@gmail.com"></a>
-          support@emcommerce.com
+          support@mcommerce.com
         </p>
         <Link href="/">
           <button type="button" width="300px" className="btn">
