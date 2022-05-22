@@ -30,7 +30,6 @@ const Cart = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
       body: JSON.stringify(cartItems),
     });
@@ -41,7 +40,7 @@ const Cart = () => {
 
     toast.loading("Redirecting...");
 
-    stripe.redirectToCheckout({ sessionID: data.id });
+    stripe.redirectToCheckout({ sessionId: data.id });
   };
 
   return (
